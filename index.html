@@ -8,15 +8,17 @@
   <title>Главная</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20240904070852">
+  <link rel="stylesheet" href="css/main.min.css?_v=20240920070707">
 
-  <script defer="defer" src="js/main.min.js?_v=20240904070852"></script>
+  <script defer="defer" src="js/main.min.js?_v=20240920070707"></script>
 </head>
 
   <body>
     <div class="wrapper">
       <div class="header__bg">
-        <header class="header" data-lp>
+        
+	<video class="header__video" autoplay src="../static/test.webm"></video>
+<header class="header" data-lp>
 	<div class="header__container">
 		<div class="header__menu-wrapper">
 			<a href="#" class="header__logo logo">
@@ -41,14 +43,13 @@
   <span></span>
 </button>
 </header>
-
         <section class="main__content">
     <div class="main__content__container">
         <h1 class="main__content-title">Продакшн, который повышает <br> значимость бренда</h1>
         <h2 class="main__content-subtitle">Видео увеличит продажи и усилит бренд. Закажите бесплатную консультацию и получите скидку 10% в день обращения.</h2>
         <div class="main__content-btns">    
-            <button class="btn-border main__content-btn">Обсудить проект</button>
-            <a href="#" class="btn">
+            <button class="btn-border main__content-btn" data-type="popup-1">Обсудить проект</button>
+            <a href="https://disk.yandex.ru/d/_ZQh58vmqLSpIA" class="btn">
                 Смотреть кейсы
                 <img src="../images/arrow-btn.svg" alt="">
             </a>
@@ -89,18 +90,18 @@
         </div>
         <div class="portfolio__form-wrapper">
 
-            <form action="" class="portfolio__form">
+            <form id="advanced-usage_form" autocomplete="off" novalidate="novalidate" action="" class="portfolio__form form">
                 <h2 class="portfolio__form-title">Скоро, здесь будет кейс вашей компании</h2>
                 <div class="portfolio__form-inputs">
-                    <input type="text" placeholder="Имя">
-                    <input type="text" placeholder="E-mail">
-                    <input type="text" placeholder="Номер телефона">
-                    <label for="" class="portfolio__form-check">
-                        <input type="checkbox" name="" id="">
+                    <input type="text" placeholder="Имя" name="fio" data-validate-field="fio">
+                    <input type="email" placeholder="E-mail" name="email" data-validate-field="email">
+                    <input type="tel" placeholder="Номер телефона" name="tel" data-validate-field="tel">
+                    <label for="checkbox-form" class="portfolio__form-check">
+                        <input type="checkbox" id="advanced-usage_consent_checkbox" class="checkbox" data-validate-field="check">
                         Я даю согласие на обработку персональных данных и согласен с политикой конфеденциальности
                     </label>
                 </div>
-                <button class="portfolio__form-btn">Обсудить проект</button>
+                <button class="portfolio__form-btn" type="submit">Обсудить проект</button>
             </form>
             <a href="https://disk.yandex.ru/d/_ZQh58vmqLSpIA" class="btn portfolio__form-cases">Смотреть кейсы <img src="../images/arrow-btn.svg" alt=""></a>
         </div>
@@ -112,27 +113,41 @@
         <h2 class="title service__title">Услуги</h2>
         <div class="service__items">
             <div class="service__item">
-                <h3 class="service__item-title">Фото и видео съемка</h3>
-                <p class="service__item-subtitle">Профессиональная фото- и видеосъемка любой направленности, будь то музыкальный клип, репортаж или иное видео</p>
-                <div class="service__item-bottom">
-                    <p class="service__item-price">От 5.000р</p>
-                    <button class="service__item-btn">Обсудить</button> 
+                <div class="service__item-text">
+                    <h3 class="service__item-title">Фото и видео съемка</h3>
+                    <p class="service__item-subtitle">Профессиональная фото- и видеосъемка любой направленности, будь то
+                        музыкальный клип, репортаж или иное видео</p>
+                    <div class="service__item-bottom">
+                        <p class="service__item-price">От 5.000р</p>
+                        <button class="service__item-btn" data-type="popup-1">Обсудить</button>
+                    </div>
                 </div>
             </div>
             <div class="service__item">
-                <h3 class="service__item-title">Реклама</h3>
-                <p class="service__item-subtitle">Дает мощный импульс вашему бизнесу. Наши специалисты проанализирут ваш бизнес, найдут конкурентов и на основе этого подберут концепцию рекламного ролика</p>
-                <div class="service__item-bottom">
-                    <p class="service__item-price">От 5.000р</p>
-                    <button class="service__item-btn">Обсудить</button> 
+                <div class="service__item-text">
+
+                    <h3 class="service__item-title">Реклама</h3>
+                    <p class="service__item-subtitle">Дает мощный импульс вашему бизнесу. Наши специалисты проанализирут
+                        ваш
+                        бизнес, найдут конкурентов и на основе этого подберут концепцию рекламного ролика</p>
+                    <div class="service__item-bottom">
+                        <p class="service__item-price">От 5.000р</p>
+                        <button class="service__item-btn" data-type="popup-1">Обсудить</button>
+                    </div>
                 </div>
             </div>
             <div class="service__item">
-                <h3 class="service__item-title">Контент для соц.сетей</h3>
-                <p class="service__item-subtitle">Специалисты из отдела Neurocast Media возьмут всю ответсвенность за наполнение ваших социальных сетей reels, фото и видео. А также наши smm специалисты помогут с написанием постов и их публикацией</p>
-                <div class="service__item-bottom">
-                    <p class="service__item-price">От 5.000р</p>
-                    <button class="service__item-btn">Обсудить</button> 
+                <div class="service__item-text">
+
+                    <h3 class="service__item-title">Контент для соц.сетей</h3>
+                    <p class="service__item-subtitle">Специалисты из отдела Neurocast Media возьмут всю ответсвенность
+                        за
+                        наполнение ваших социальных сетей reels, фото и видео. А также наши smm специалисты помогут с
+                        написанием постов и их публикацией</p>
+                    <div class="service__item-bottom">
+                        <p class="service__item-price">От 5.000р</p>
+                        <button class="service__item-btn" data-type="popup-1">Обсудить</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,9 +172,9 @@
                     <p class="work__item-text">На постпродакшене, вы можете следить за процессом монтажа, цветокоррекции и разработки графики, видеть все изменения в проекте, уточнять и задавать вопросы.</p>
                 </div>
             </div>
-            <div class="work__img">
-                <video src="../images/video-portfolio.mp4"></video>
-            </div>
+            <video class="work__video" controls>
+                <source src="../static/video-portfolio.mp4">
+            </video>
         </div>
     </div>
 </section>
@@ -182,7 +197,6 @@
           </div>
     </div>
 </section>
-
       </main>
 
       <footer class="footer">
@@ -208,7 +222,7 @@
     <div class="footer__middle">
       Соц.сети
       <div class="footer__social">
-        <a href="#">
+        <a href="https://t.me/neurocastprod">
           <img src="../images/f1.svg" alt="">
         </a>
         <a href="#">
@@ -238,11 +252,25 @@
         <div class="popup__content">
             <button class="button-close popup__close" type="button">x</button>
             <div class="popup__body">
-                <h2>Базовый пример модального окна</h2>
+                <form class="portfolio__form form-popup form__portfolio">
+                    <div class="popup__portfolio-text">
+                        <h2 class="portfolio__form-title">Скоро, здесь будет кейс вашей компании</h2>
+                        <div class="portfolio__form-inputs">
+                            <input type="text" placeholder="Имя" name="fio" data-validate-field="fio">
+                            <input type="email" placeholder="E-mail" name="email" data-validate-field="email">
+                            <input type="tel" placeholder="Номер телефона" name="tel" data-validate-field="tel">
+                            <label for="checkbox-form" class="portfolio__form-check">
+                                <input type="checkbox" id="advanced-usage_consent_checkbox" class="checkbox" data-validate-field="check">
+                                Я даю согласие на обработку персональных данных и согласен с политикой
+                                конфеденциальности
+                            </label>
+                        </div>
+                        <button class="portfolio__form-btn" type="submit">Обсудить проект</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
-
   </body>
 </html>

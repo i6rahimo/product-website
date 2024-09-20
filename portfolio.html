@@ -8,15 +8,17 @@
   <title>Портфолио</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20240904070852">
+  <link rel="stylesheet" href="css/main.min.css?_v=20240920070707">
 
-  <script defer="defer" src="js/main.min.js?_v=20240904070852"></script>
+  <script defer="defer" src="js/main.min.js?_v=20240920070707"></script>
 </head>
 
   <body>
     <div class="wrapper">
       <div class="header__bg">
-        <header class="header" data-lp>
+        
+	<video class="header__video" autoplay src="../static/test.webm"></video>
+<header class="header" data-lp>
 	<div class="header__container">
 		<div class="header__menu-wrapper">
 			<a href="#" class="header__logo logo">
@@ -41,7 +43,6 @@
   <span></span>
 </button>
 </header>
-
       </div>
 
       <main class="page">
@@ -90,14 +91,14 @@
                         <h2 class="portfolio__form-title">Скоро, здесь будет кейс вашей компании</h2>
                         <div class="portfolio__form-inputs">
                             <input type="text" placeholder="Имя">
-                            <input type="text" placeholder="E-mail">
-                            <input type="text" placeholder="Номер телефона">
+                            <input type="email" placeholder="E-mail">
+                            <input type="tel" placeholder="Номер телефона">
                             <label for="" class="portfolio__form-check">
                                 <input type="checkbox" name="" id="">
                                 Я даю согласие на обработку персональных данных и согласен с политикой конфеденциальности
                             </label>
                         </div>
-                        <button class="portfolio__form-btn">Обсудить проект</button>
+                        <button class="portfolio__form-btn" data-type="popup-1">Обсудить проект</button>
                     </div>
                 </form>
             </div>
@@ -146,7 +147,7 @@
     <div class="footer__middle">
       Соц.сети
       <div class="footer__social">
-        <a href="#">
+        <a href="https://t.me/neurocastprod">
           <img src="../images/f1.svg" alt="">
         </a>
         <a href="#">
@@ -176,11 +177,25 @@
         <div class="popup__content">
             <button class="button-close popup__close" type="button">x</button>
             <div class="popup__body">
-                <h2>Базовый пример модального окна</h2>
+                <form class="form__portfolio portfolio__form form-popup">
+                    <div class="popup__portfolio-text">
+                        <h2 class="portfolio__form-title">Скоро, здесь будет кейс вашей компании</h2>
+                        <div class="portfolio__form-inputs">
+                            <input type="text" placeholder="Имя" name="fio" data-validate-field="fio">
+                            <input type="email" placeholder="E-mail" name="email" data-validate-field="email">
+                            <input type="tel" placeholder="Номер телефона" name="tel" data-validate-field="tel">
+                            <label for="checkbox-form" class="portfolio__form-check">
+                                <input type="checkbox" id="advanced-usage_consent_checkbox" class="checkbox" data-validate-field="check">
+                                Я даю согласие на обработку персональных данных и согласен с политикой
+                                конфеденциальности
+                            </label>
+                        </div>
+                        <button class="portfolio__form-btn" type="submit">Обсудить проект</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
-
   </body>
 </html>
